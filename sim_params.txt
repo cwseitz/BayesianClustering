@@ -1,0 +1,9 @@
+molspercluster=100
+background=.5
+nclusters=10
+xlim=0,3000
+ylim=0,3000
+gammaparams=5,0.166667
+nsim=100
+sdcluster=50
+
