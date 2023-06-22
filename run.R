@@ -1,5 +1,5 @@
 source("internal.R")
-foldername="Example"
+foldername="example"
 r = readLines(con=file.path(paste(foldername, "/config.txt", sep="")))
 get <- function(type){i = grep(type,r); strsplit(r[i], "=")[[1]][2]}
 as.v <- function(ch){as.numeric(strsplit(ch,",")[[1]])}
@@ -20,9 +20,12 @@ model=get("model")
 }
 else {stop("Haven't implemented anything else!")}}
 
-o = order(histbins); histbins=histbins[o]; histvalues=histvalues[o]
-f = approxfun(histbins, histvalues, yleft=histvalues[1], yright=histvalues[length(histvalues)])
-cst=integrate(f, lower=histbins[o],upper=histbins[length(histbins)])$value
+o <- order(histbins)
+histbins <- histbins[o]
+histvalues <- histvalues[o]
+f <- approxfun(histbins, histvalues, yleft = histvalues[1], yright = histvalues[length(histvalues)])
+cst <- integrate(f, lower = histbins[1], upper = histbins[length(histbins)])$value
+
 psd <- function(sd){
   log(f(sd))-log(cst) 
 }

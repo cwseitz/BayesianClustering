@@ -1,6 +1,6 @@
 source("internal.R")
 
-foldernames=c("Example")
+foldernames=c("example")
 makeplot=TRUE
 skeleton=FALSE
 
