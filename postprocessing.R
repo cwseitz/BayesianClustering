@@ -1,6 +1,6 @@
 source("internal.R")
 
-foldernames=c("example")
+foldernames=c("230516_Hela_j646_50pm overnight_High_10ms_10000frames_buffer_02")
 makeplot=TRUE
 skeleton=FALSE
 

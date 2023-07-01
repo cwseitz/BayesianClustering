@@ -1,5 +1,5 @@
 source("internal.R")
-foldername="example"
+foldername="230516_Hela_j646_50pm overnight_High_10ms_10000frames_buffer_02"
 r = readLines(con=file.path(paste(foldername, "/config.txt", sep="")))
 get <- function(type){i = grep(type,r); strsplit(r[i], "=")[[1]][2]}
 as.v <- function(ch){as.numeric(strsplit(ch,",")[[1]])}

@@ -1,5 +1,0 @@
-The best: clusterscale40 thresh80labels.txt
-Number of clusters:10
-Percentage in clusters: 42.2%
-Mean number of molecules per cluster: 84.4
-Mean radius: 47.75037
