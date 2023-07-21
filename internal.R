@@ -72,7 +72,7 @@ toroid <- function(pts, xlim, ylim, range){
 
 
 
-Kclust <- function(pts, sds=0, xlim, ylim, psd=NULL, minsd=NULL, maxsd=NULL, useplabel=TRUE, alpha=NULL, pb=.5, rseq=seq(1,5,by=0.1), thseq=seq(1,10,by=0.2), score=FALSE, rlabel=FALSE, report=TRUE){
+Kclust <- function(pts, sds=0, xlim, ylim, psd=NULL, minsd=NULL, maxsd=NULL, useplabel=TRUE, alpha=NULL, pb=.5, rseq=seq(1,2,by=0.025), thseq=seq(0.1,4,by=0.1), score=FALSE, rlabel=FALSE, report=TRUE){
   N = dim(pts)[1]
   tor=toroid(pts, xlim, ylim, max(rseq))
   D=as.matrix(dist(tor))
